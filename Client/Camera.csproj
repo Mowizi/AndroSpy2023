@@ -222,7 +222,8 @@
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.xml" />
   </ItemGroup>
-  <!-- <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" /> -->
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" Condition="Exists('$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets')" />
+<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" Condition="!Exists('$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets')" />
   <Import Project="packages\Xamarin.Android.Support.Annotations.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Annotations.targets" Condition="Exists('packages\Xamarin.Android.Support.Annotations.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Annotations.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
