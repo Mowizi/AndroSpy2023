@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Task2</RootNamespace>
     <AssemblyName>ServicesDemo3</AssemblyName>
-    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFramework>net8.0-android</TargetFramework>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
