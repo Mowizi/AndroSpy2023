@@ -1,5 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk"> 
-  <PropertyGroup> 
+  <PropertyGroup>`n    <SupportedOSPlatformVersion>21.0</SupportedOSPlatformVersion> 
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems> 
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration> 
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform> 
