@@ -30,5 +30,8 @@ jobs:
           dotnet nuget locals all --clear
           dotnet workload install android
 
+      - name: Restore Project Dependencies
+        run: dotnet restore Client/Camera.csproj
+
       - name: Build with dotnet
-        run: dotnet build Client/Camera.csproj -c Release
+        run: dotnet build Client/Camera.csproj -c Release -p:EnableMauiToXamarinSupport=true -p:XamarinAndroidSupport=true
