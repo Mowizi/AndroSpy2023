@@ -13,18 +13,22 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
       - name: Set up Java
         uses: actions/setup-java@v5
         with:
           distribution: 'microsoft'
           java-version: '17'
+
       - name: Set up .NET SDK
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.0.400'
+
       - name: Install .NET Android Workload
         run: |
           dotnet nuget locals all --clear
-          dotnet workload install android --version 8.0.400
+          dotnet workload install android
+
       - name: Build with dotnet
-        run: dotnet build Client/Camera.csproj -c Release -p:EnableMauiToXamarinSupport=true
+        run: dotnet build Client/Camera.csproj -c Release
