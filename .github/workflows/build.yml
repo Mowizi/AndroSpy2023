@@ -28,4 +28,6 @@ jobs:
           dotnet workload install android --version 8.0.400
       - name: Build with dotnet
         run: dotnet build Client/Camera.csproj -c Release -p:EnableMauiToXamarinSupport=true
+      - name: Build with dotnet
+        run: dotnet build Client/Camera.csproj -c Release -p:EnableMauiToXamarinSupport=true
         run: dotnet build Client/Camera.csproj -c Release
