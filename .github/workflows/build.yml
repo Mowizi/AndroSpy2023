@@ -26,12 +26,10 @@ jobs:
           dotnet-version: '8.0.400'
 
       - name: Install .NET Android Workload
-        run: |
-          dotnet nuget locals all --clear
-          dotnet workload install android
+        run: dotnet workload install android
 
-      - name: Restore Project Dependencies
+      - name: Restore Dependencies
         run: dotnet restore Client/Camera.csproj
 
-      - name: Build with dotnet
-        run: dotnet build Client/Camera.csproj -c Release -p:EnableMauiToXamarinSupport=true -p:XamarinAndroidSupport=true
+      - name: Build Android App
+        run: dotnet build Client/Camera.csproj -c Release -p:BuildingInsideVisualStudio=true -p:IgnoreCase=true
